@@ -1,0 +1,28 @@
+  ul li{
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &:hover{
+        cursor: pointer;
+    }
+  }
+
+  ul li a{
+    border: 1px solid #183E8A;
+    border-radius: 10px;    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: 1s ease all;
+    line-height: 1;
+    min-height: 120px; 
+    color: black;
+  }
+
+
+  ul li a:hover{
+      background: #a3f2fd;
+      color: #477698;
+      box-shadow: 0 0 6px #b3cada;
+      text-decoration: none;
+  }
