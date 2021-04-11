@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DesignUtilityService } from '../appServices/design-utility.service';
+import { DesignUtilityService } from '../../appServices/design-utility.service';
 
 @Component({
   selector: 'app-custom',

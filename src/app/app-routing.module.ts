@@ -8,7 +8,8 @@ import { ObservableComponent } from './observable/observable.component';
 import { OfFromComponent } from './observable/of-from/of-from.component';
 import { PromiseComponent } from './promise/promise.component';
 import { ToArrayComponent } from './observable/to-array/to-array.component';
-import { CustomComponent } from './custom/custom.component';
+import { CustomComponent } from './observable/custom/custom.component';
+import { MapComponent } from './observable/map/map.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/promise', pathMatch: 'full'},
@@ -19,7 +20,8 @@ const routes: Routes = [
     { path: 'interval', component: IntervalComponent},
     { path: 'of-from', component: OfFromComponent},
     { path: 'to-array', component: ToArrayComponent},
-    { path: 'custom', component: CustomComponent}
+    { path: 'custom', component: CustomComponent},
+    { path: 'map', component: MapComponent}
   ]},
   { path: 'async-await', component: AsyncAwaitComponent},  
   { path: '**', component: PromiseComponent},
