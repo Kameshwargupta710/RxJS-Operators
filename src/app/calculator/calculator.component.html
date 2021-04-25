@@ -1,0 +1,145 @@
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Calculator</h3>
+                <form [formGroup]="calculatorInput">
+                    <div class="form-group">
+                        <label>Input 1</label>
+                        <input type="text" formControlName="inputone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.inputone.errors }" />
+                        <div *ngIf="submitted && f.inputone.errors" class="invalid-feedback">
+                            <div *ngIf="f.inputone.errors.required">Input 1 is required</div>
+                            <div *ngIf="f.inputone.errors.pattern">Please enter number</div>
+                        </div>                        
+                    </div>
+                    <div class="form-group">
+                        <label>Input 2</label>
+                        <input type="text" formControlName="inputtwo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.inputtwo.errors }" />
+                        <div *ngIf="submitted && f.inputtwo.errors" class="invalid-feedback">
+                            <div *ngIf="f.inputtwo.errors.required">Input 2 is required</div>
+                            <div *ngIf="f.inputtwo.errors.pattern">Please enter number</div>
+                        </div>                        
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" (click)="opeartion('+')">Add</button>
+                        <button class="btn btn-primary mx-2" (click)="opeartion('-')">Subtract</button>
+                        <button class="btn btn-primary mx-2" (click)="opeartion('/')">Divide</button>
+                        <button class="btn btn-primary" (click)="opeartion('*')">Multiply</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Result : {{result}}</label>                        
+                    </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Pattern</h3>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div id="reverseDiamond">                            
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="diamondPattern">                            
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr class="my-5">
+
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Get IP Address</h3>
+                <div class="form-group">
+                    <button class="btn btn-primary" (click)="getIpAddress()">DisplayIpAddress</button>                    
+                </div>                
+                <div class="form-group" *ngIf="apiResponse">
+                    <label>IP-Address : {{apiResponse.ip}}</label>                        
+                </div>
+                <div class="form-group" *ngIf="apiErrorResponse">
+                    <label>IP-Address : {{apiErrorResponse}}</label>                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr class="my-5">
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>String into Pattern</h3>                
+                <div class="form-group">
+                    <label>Enter a string</label>
+                    <input type="text" [(ngModel)]="stringInToPattern" class="form-control"/>
+                </div> 
+                <div class="form-group">
+                    <button class="btn btn-primary" (click)="convertStringIntoPattern()">Convert</button>                    
+                </div>               
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="splitReverseDiamond">                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="diamondPattern">                            
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5">
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Append Number in Acending Order</h3>                
+                <div class="form-group">
+                    <label>Enter a number and click on Append Button</label>
+                    <input type="number" [(ngModel)]="numberListInput" class="form-control"/>
+                </div> 
+                <div class="form-group">
+                    <button class="btn btn-primary" (click)="appendNumber()">Append</button>                    
+                </div>               
+                <div class="form-group" *ngIf="numberList">
+                    <label>Number List : 
+                        <span *ngFor="let number of numberList">
+                            {{number}}&nbsp;
+                        </span>
+                    </label>                        
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+

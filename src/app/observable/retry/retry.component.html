@@ -1,0 +1,34 @@
+<div>
+    <h2>Retry, RetryWhen, Scan and Delay
+    </h2>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Ex - 01</strong>
+            <hr>            
+            <br>
+            <ng-Container *ngIf="apiResponse != null">
+                <table class="table">
+                    <tr>
+                        <th>Id</th>
+                        <td>{{apiResponse.id}}</td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td>{{apiResponse.title}}</td>
+                    </tr>                
+                </table>
+            </ng-Container>            
+            <div>
+                <button class="btn btn-primary" type="button" [disabled]="fetchedData" (click)="fetchingData()">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="fetchedData"></span>
+                    {{fetchedData ? 'Fetching...':'Fetch Data'}}
+                </button>                
+            </div>
+            <br>            
+            <div>
+                <strong>Status </strong>: <span [ngClass]="{'text-success':status == 'Data Fetched','text-danger':status == 'No Data'}">{{status}}</span>
+            </div>
+        </div>                
+    </div>
+</div>

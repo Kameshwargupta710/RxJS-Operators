@@ -14,6 +14,22 @@ import { OfFromComponent } from './observable/of-from/of-from.component';
 import { ToArrayComponent } from './observable/to-array/to-array.component';
 import { CustomComponent } from './observable/custom/custom.component';
 import { MapComponent } from './observable/map/map.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { FilterComponent } from './observable/filter/filter.component';
+import { PluckComponent } from './observable/pluck/pluck.component';
+import { TapComponent } from './observable/tap/tap.component';
+import { TakeComponent } from './observable/take/take.component';
+import { RetryComponent } from './observable/retry/retry.component';
+import { DebounceTimeComponent } from './observable/debounce-time/debounce-time.component';
+import { SubjectComponent } from './observable/subject/subject.component';
+import { DesignUtilityService } from './appServices/design-utility.service';
+import { Comp1Component } from './comps/comp1/comp1.component';
+import { Comp2Component } from './comps/comp2/comp2.component';
+import { Comp3Component } from './comps/comp3/comp3.component';
+import { ReplaySubjectComponent } from './observable/replay-subject/replay-subject.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +43,30 @@ import { MapComponent } from './observable/map/map.component';
     OfFromComponent,
     ToArrayComponent,
     CustomComponent,
-    MapComponent
+    MapComponent,
+    CalculatorComponent,
+    FilterComponent,
+    PluckComponent,
+    TapComponent,
+    TakeComponent,
+    RetryComponent,
+    DebounceTimeComponent,
+    SubjectComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    ReplaySubjectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DesignUtilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

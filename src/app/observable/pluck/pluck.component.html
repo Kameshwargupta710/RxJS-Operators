@@ -1,0 +1,38 @@
+<div>
+    <h2>Pluck</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <strong>Ex - 01</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Pluck</strong> : by property
+            </p>
+            <br>
+            <table class="table">
+                <th>Name</th>
+                <tr *ngFor="let name of data">
+                    <td>
+                        {{name}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <strong>Ex - 02</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Pluck</strong> by nested property
+            </p>
+            <br>
+            <table class="table">
+                <th>Name</th>
+                <tr *ngFor="let name of data2">
+                    <td>
+                        {{name}}
+                    </td>
+                </tr>
+            </table>
+        </div>        
+    </div>
+</div>
