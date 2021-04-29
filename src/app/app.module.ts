@@ -30,6 +30,14 @@ import { Comp1Component } from './comps/comp1/comp1.component';
 import { Comp2Component } from './comps/comp2/comp2.component';
 import { Comp3Component } from './comps/comp3/comp3.component';
 import { ReplaySubjectComponent } from './observable/replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './observable/async-subject/async-subject.component';
+import { ConcatComponent } from './observable/concat/concat.component';
+import { MergeComponent } from './observable/merge/merge.component';
+import { MergeMapComponent } from './observable/merge-map/merge-map.component';
+import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
+import { ConcatMapNotificationComponent } from './observable/concat-map-notification/concat-map-notification.component';
+import { SwitchMapComponent } from './observable/switch-map/switch-map.component';
+import { SwitchMapSearchComponent } from './observable/switch-map-search/switch-map-search.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +63,15 @@ import { ReplaySubjectComponent } from './observable/replay-subject/replay-subje
     Comp1Component,
     Comp2Component,
     Comp3Component,
-    ReplaySubjectComponent
+    ReplaySubjectComponent,
+    AsyncSubjectComponent,
+    ConcatComponent,
+    MergeComponent,
+    MergeMapComponent,
+    ConcatMapComponent,
+    ConcatMapNotificationComponent,
+    SwitchMapComponent,
+    SwitchMapSearchComponent
   ],
   imports: [
     BrowserModule,

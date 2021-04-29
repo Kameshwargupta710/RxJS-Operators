@@ -19,6 +19,14 @@ import { RetryComponent } from './observable/retry/retry.component';
 import { DebounceTimeComponent } from './observable/debounce-time/debounce-time.component';
 import { SubjectComponent } from './observable/subject/subject.component';
 import { ReplaySubjectComponent } from './observable/replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './observable/async-subject/async-subject.component';
+import { ConcatComponent } from './observable/concat/concat.component';
+import { MergeComponent } from './observable/merge/merge.component';
+import { MergeMapComponent } from './observable/merge-map/merge-map.component';
+import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
+import { ConcatMapNotificationComponent } from './observable/concat-map-notification/concat-map-notification.component';
+import { SwitchMapComponent } from './observable/switch-map/switch-map.component';
+import { SwitchMapSearchComponent } from './observable/switch-map-search/switch-map-search.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/promise', pathMatch: 'full'},
@@ -38,7 +46,15 @@ const routes: Routes = [
     { path: 'retry', component: RetryComponent}, 
     { path: 'debounce-time', component: DebounceTimeComponent},
     { path: 'subject', component: SubjectComponent}, 
-    { path: 'replay-subject', component: ReplaySubjectComponent},    
+    { path: 'replay-subject', component: ReplaySubjectComponent}, 
+    { path: 'async-subject', component: AsyncSubjectComponent}, 
+    { path: 'concat', component: ConcatComponent},
+    { path: 'merge', component: MergeComponent},
+    { path: 'merge-map', component: MergeMapComponent},
+    { path: 'concat-map', component: ConcatMapComponent},   
+    { path: 'concat-map-notification', component: ConcatMapNotificationComponent},
+    { path: 'switch-map', component: SwitchMapComponent},
+    { path: 'switch-map-search', component: SwitchMapSearchComponent},
   ]},
   { path: 'calculator', component: CalculatorComponent},
   { path: 'async-await', component: AsyncAwaitComponent},  

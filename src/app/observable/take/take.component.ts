@@ -39,7 +39,7 @@ export class TakeComponent implements OnInit {
     const condition1 = timer(6000);
     const condition2 = fromEvent(document,'click')
 
-    
+
     source.pipe(
       map(res=>'Number '+res),
       takeUntil(condition2)

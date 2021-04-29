@@ -1,1 +1,53 @@
-<p>replay-subject works!</p>
+<div>
+    <h2>Replay Subject
+    </h2>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>{{methodInterval ? 'Interval Started' : 'Add Video'}}</h4>        
+        </div>
+        <div class="col-md-6 d-flex justify-content-end">
+            <button class="btn btn-warning" (click)="toggleMethod()">Toggle Method</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center align-items-center" *ngIf="!methodInterval">        
+        <div class="col-md-4">
+            <input type="text" class="form-control my-3" #video>            
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-success" (click)="onVideoAdd(video)">Add Video</button>
+        </div>        
+    </div>
+    <hr *ngIf="!methodInterval">
+    <div class="row">
+        <div class="col-md-4">
+            <strong>User - 01</strong>
+            <hr>
+            <ul class="video-list">
+                <li *ngFor="let user of user1List"><strong>Video : </strong>{{user}}</li>                
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>User - 02</strong>
+            <hr>
+            <ul class="video-list">
+                <li *ngFor="let user of user2List"><strong>Video : </strong>{{user}}</li>
+            </ul>
+            <div>
+                <button class="btn btn-success" [ngClass]="subscribeMode2 ? 'btn-danger': 'btn-success'" (click)="user2subscribe()">{{subscribeMode2 ? 'Unsubscribe': 'Subscribe'}} UX Trendz</button>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <strong>User - 03</strong>
+            <hr>
+            <ul class="video-list">
+                <li *ngFor="let user of user3List"><strong>Video : </strong>{{user}}</li>
+            </ul>
+            <div>
+                <button class="btn btn-success" [ngClass]="subscribeMode3 ? 'btn-danger': 'btn-success'" (click)="user3subscribe()">{{subscribeMode3 ? 'Unsubscribe': 'Subscribe'}} UX Trendz</button>
+            </div>
+        </div>
+    </div>
+</div>
