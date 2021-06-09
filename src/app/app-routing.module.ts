@@ -27,6 +27,10 @@ import { ConcatMapComponent } from './observable/concat-map/concat-map.component
 import { ConcatMapNotificationComponent } from './observable/concat-map-notification/concat-map-notification.component';
 import { SwitchMapComponent } from './observable/switch-map/switch-map.component';
 import { SwitchMapSearchComponent } from './observable/switch-map-search/switch-map-search.component';
+import { TestSearchComponent } from './observable/test-search/test-search.component';
+import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.component';
+import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
+import { CombineLatestWithlatestComponent } from './observable/combine-latest-withlatest/combine-latest-withlatest.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/promise', pathMatch: 'full'},
@@ -55,6 +59,9 @@ const routes: Routes = [
     { path: 'concat-map-notification', component: ConcatMapNotificationComponent},
     { path: 'switch-map', component: SwitchMapComponent},
     { path: 'switch-map-search', component: SwitchMapSearchComponent},
+    { path: 'exhaust-map', component: ExhaustMapComponent},
+    { path: 'share-replay', component: ShareReplayComponent},    
+    { path: 'combine-latest-withlatest', component: CombineLatestWithlatestComponent},
   ]},
   { path: 'calculator', component: CalculatorComponent},
   { path: 'async-await', component: AsyncAwaitComponent},  

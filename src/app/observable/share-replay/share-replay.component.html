@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row mb-4">
+        <h2>Share Replay</h2>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <strong>Mobiles</strong>
+            <br>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col-6 my-3" *ngFor="let object1 of mobile | async"> 
+                    <div class="card">
+                        <img class="card-img-top my-3" src="{{object1.image}}" height="150" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{object1.type}}</h5>
+                        <p class="card-text">{{object1.name}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{object1.description}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">{{object1.price | currency}}</a>
+                        <a href="#" class="card-link">{{object1.buynow ? 'Buy Now': ''}}</a>
+                    </div>
+                    </div>                                       
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <strong>Laptop</strong>
+            <br>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col-6 my-3" *ngFor="let object2 of laptop | async">
+                    <div class="card">
+                        <img class="card-img-top my-3" src="{{object2.image}}" height="150" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{object2.type}}</h5>
+                        <p class="card-text">{{object2.name}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{object2.description}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">{{object2.price | currency}}</a>
+                        <a href="#" class="card-link">{{object2.buynow ? 'Buy Now': ''}}</a>
+                    </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-12">
+            <strong>All Products</strong>
+            <br>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <ng-Container class="col-3 my-3" *ngFor="let object3 of allProducts | async">  
+                            <div class="card">
+                                <img class="card-img-top my-3" src="{{object3.image}}" height="150" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{object3.type}}</h5>
+                                <p class="card-text">{{object3.name}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">{{object3.description}}</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">{{object3.price | currency}}</a>
+                                <a href="#" class="card-link">{{object3.buynow ? 'Buy Now': ''}}</a>
+                            </div>
+                            </div>                                                     
+                        </ng-Container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

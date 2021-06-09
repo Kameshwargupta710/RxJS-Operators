@@ -38,6 +38,10 @@ import { ConcatMapComponent } from './observable/concat-map/concat-map.component
 import { ConcatMapNotificationComponent } from './observable/concat-map-notification/concat-map-notification.component';
 import { SwitchMapComponent } from './observable/switch-map/switch-map.component';
 import { SwitchMapSearchComponent } from './observable/switch-map-search/switch-map-search.component';
+import { TestSearchComponent } from './observable/test-search/test-search.component';
+import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.component';
+import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
+import { CombineLatestWithlatestComponent } from './observable/combine-latest-withlatest/combine-latest-withlatest.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +75,11 @@ import { SwitchMapSearchComponent } from './observable/switch-map-search/switch-
     ConcatMapComponent,
     ConcatMapNotificationComponent,
     SwitchMapComponent,
-    SwitchMapSearchComponent
+    SwitchMapSearchComponent,
+    TestSearchComponent,
+    ExhaustMapComponent,
+    ShareReplayComponent,
+    CombineLatestWithlatestComponent
   ],
   imports: [
     BrowserModule,

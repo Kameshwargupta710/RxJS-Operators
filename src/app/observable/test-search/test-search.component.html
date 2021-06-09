@@ -1,0 +1,16 @@
+<div>
+    <h2>Test</h2>
+    <br>
+    <hr>
+    <br>
+    <label for="">Search Employee</label>
+    <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="searchEmployee()" class="form-control">
+    <br>
+    <hr>
+    <br>
+    <div><strong>Search Employees</strong>&nbsp;
+        <span *ngFor="let empName of searchedEmployee">{{empName}}&nbsp;</span>
+    <div>
+        
+    </div></div>
+</div>

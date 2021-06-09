@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   title = 'rxjs';
   exclusive: boolean = false;
 
-  constructor(private _du: DesignUtilityService){
+  constructor(public _du: DesignUtilityService){
     
   }
 
